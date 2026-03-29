@@ -117,7 +117,7 @@ const handleHome = () => {
               >
                 
                 <MenuItem onClick={handleHome} >Home</MenuItem>
-                { !user ? <MenuItem onClick={handleLogin}>Login</MenuItem>:null}
+                {!user && AuthStatus!==500?<MenuItem onClick={handleLogin}>Login</MenuItem>:null}
                 <MenuItem onClick={handleAccount}>Account</MenuItem>
               </Menu>
             </div>
