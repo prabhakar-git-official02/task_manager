@@ -9,7 +9,9 @@ import api from "@/app/api/axios/api";
 import Navbar from "@/app/Client/Components/Navbar/page";
 import {Box} from "@mui/material";
 import ProgressLoad from "@/app/Client/Components/ProgressLoad/page";
+import { useRouter } from "next/navigation";
 function ResetPassword() {
+  const router = useRouter()
   const { id } = useParams();
   console.log("token",id);
   const [newPassword, setNewPassword] = useState<string>("");
@@ -104,6 +106,7 @@ function ResetPassword() {
         setLoading(false);
         setNewPassword("")
         setConfirmPassword("")
+        router.push("/Client/Auth/Login")
       }
       
     } catch (err) {
@@ -353,7 +356,7 @@ function ResetPassword() {
 
   color: white;
 
-  font-size: 26px;
+  font-size: 20px;
 
   font-weight: 600;
 

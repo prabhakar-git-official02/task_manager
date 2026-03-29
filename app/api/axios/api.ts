@@ -1,7 +1,12 @@
 import axios from "axios";
 
+const baseURL =
+  process.env.NODE_ENV === "development"
+    ? process.env.NEXT_LOCAL_BASE_URL
+    : process.env.NEXT_PUBLIC_BASE_URL;
+
 const api = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_BASE_URL || process.env.NEXT_LOCAL_BASE_URL,
+  baseURL,
   withCredentials: true,
 });
 
