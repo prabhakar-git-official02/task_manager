@@ -12,6 +12,8 @@ import { useRouter } from "next/navigation";
 import Navbar from "../../Components/Navbar/page";
 import ProgressLoad from "../../Components/ProgressLoad/page";
 import SearchInput from "../../Components/SearchInput/page";
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
+import TaskIcon from '@mui/icons-material/Task';
 function ManageTasks() {
   const dispatch = useDispatch<AppDispatch>();
   const router = useRouter();
@@ -90,7 +92,7 @@ function ManageTasks() {
                   <h5 className="fw-bold">{t.title}</h5>
 
                   <span className={`status ${t.completed ? "done" : "pending"}`}>
-                    {t.completed ? "✔ Done" : "⏳ Pending"}
+                    {t.completed ? <span className="fs-6 mx-1"><TaskIcon/> Completed</span>:<span className="fs-6 mx-1"><PendingActionsIcon/> Pending</span>}
                   </span>
                 </div>
 
@@ -170,10 +172,11 @@ function ManageTasks() {
           font-size: 13px;
         }
 
-        .status {
-          padding: 5px 12px;
+         .status {
+          padding: 3px 5px;
           border-radius: 20px;
           font-size: 12px;
+          font-weight: 300;
         }
 
         .done {

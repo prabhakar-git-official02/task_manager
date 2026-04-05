@@ -9,6 +9,8 @@ import { getTasksThunk } from "../../Thunks/tasksGetThunk/thunk";
 import Navbar from "../../Components/Navbar/page";
 import { useState } from "react";
 import SearchInput from "../../Components/SearchInput/page";
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
+import TaskIcon from '@mui/icons-material/Task';
 function ViewTasks() {
   const dispatch = useDispatch<AppDispatch>();
     const [search, setSearch] = useState<string>("");
@@ -49,7 +51,7 @@ function ViewTasks() {
         <h4 className="fw-bold mb-3">{t.title}</h4>
 
 
-        <p className="desc big-text">{t.description}</p>
+        <p className="desc big-text">{t.description || "no description available"}</p>
 
 
         <div className="notes big-notes">
@@ -60,7 +62,7 @@ function ViewTasks() {
         <div className="d-flex justify-content-between align-items-center mt-4">
 
           <span className={`status ${t.completed ? "done" : "pending"}`}>
-            {t.completed ? "✔ Completed" : "⏳ Pending"}
+            {t.completed ? <span className="fs-6 mx-1"><TaskIcon/> Completed</span>:<span className="fs-6 mx-1"><PendingActionsIcon/> Pending</span>}
           </span>
 
           <small className="date">
@@ -130,10 +132,10 @@ function ViewTasks() {
         }
 
         .status {
-          padding: 5px 12px;
+          padding: 3px 5px;
           border-radius: 20px;
           font-size: 12px;
-          font-weight: 500;
+          font-weight: 300;
         }
 
         .done {
