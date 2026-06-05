@@ -1,0 +1,93 @@
+# Task Manager
+
+## Overview
+
+A full-stack Task Manager application built with Next.js and TypeScript, designed to help users efficiently manage daily tasks. The application provides secure authentication, task management features, and a responsive user interface.
+
+## Live Deployment
+
+* Deployed on Vercel
+
+## Backend Tech Stack
+
+* Next.js (Server Side)
+* TypeScript
+* MongoDB
+* JWT Authentication
+* Nodemailer
+
+## Backend Features
+
+* MVC Architecture
+* RESTful API Development
+* JWT-based Authentication & Authorization
+* Password Hashing using Bcrypt
+* Temporary Token Generation using Crypto
+* Nodemailer Email Integration
+* Authentication Middleware (Proxy Middleware)
+* CRUD Operations for Task Management
+* Secure Password Reset Functionality
+
+## Frontend Tech Stack
+
+* Next.js (Client Side)
+* TypeScript
+* Redux Toolkit
+* Bootstrap
+* Material UI (MUI)
+* HTML5
+* CSS3
+
+## Frontend Features
+
+* State Management using Redux Toolkit
+* Redux Slices for Modular State Handling
+* Async API Handling with Redux Thunk
+* Axios Interceptors for Automatic JWT Refresh Token Management
+* Responsive UI using Bootstrap and Material UI
+* Protected Routes and Secure Navigation
+
+## Features
+
+### User Authentication
+
+* User Registration
+* User Login
+* JWT Authentication
+* Secure Logout
+* Password Change
+* Password Reset via Email
+
+### Task Management
+
+* Create Tasks
+* View Tasks
+* Update Tasks
+* Delete Tasks
+* Track and Manage Daily Activities
+
+### Account Settings
+
+* View Account Details
+* Change Password
+* Reset Password
+* Logout
+
+## Security Features
+
+* JWT Authentication
+* Password Encryption using Bcrypt
+* Secure Token Generation using Crypto
+* Protected API Routes
+* Authentication Middleware
+
+## Project Highlights
+
+* Full-Stack Application with Next.js
+* Type-Safe Development using TypeScript
+* Scalable MVC Architecture
+* Secure Authentication System
+* Email-Based Password Recovery
+* Responsive and Modern UI
+* Deployed on Vercel
+
